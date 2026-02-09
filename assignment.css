@@ -29,8 +29,9 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 form label {
-    font-size: 14px;
-    color: #555;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
 }
 
 form input,
@@ -100,4 +101,34 @@ form textarea {
 }
 .li{
     width: 250px;
+}
+.clear{
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #2e5aac , #6b5cff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 350px;
+}
+
+.sample{
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #2e5aac , #6b5cff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 350px;
+}
+.clear:hover{
+    background: #e04e4e;
+    scale: 1.05;
+    transform: scaleY(1.05);
 }
