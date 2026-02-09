@@ -7,9 +7,19 @@ const addBtn = document.querySelector('.add-btn')
 
 addBtn.addEventListener('click', addEvent)
 
+const sample = document.querySelector('.sample')
+
 function addEvent() {
     if (r.value.trim() === '') {
         alert('Please enter a task')
+        return
+    }
+    else if (d.value.trim() === '') {
+        alert('Please enter a date')
+        return
+    }
+    else if (c.value.trim() === '') {
+        alert('Please select a category')
         return
     }
 
@@ -18,8 +28,8 @@ function addEvent() {
 
     li.innerHTML = `
         <span class="text">${r.value}</span><br>
-        <span class="date">${d.value}</span><br>
-        <span class="cat">${c.value}</span><br>
+        <span class="date" id='date'>🗓️${d.value}</span><br>
+        <span class="cat" id='cat'>${c.value}</span><br>
         <span class="des">${des.value}</span>
         <button class="delete">X</button>
     `
@@ -58,11 +68,14 @@ function addSampleEvent() {
     li.style.width = '250px'
 
     li.innerHTML = `
-        <span class="text">${sampleEvent.ET}</span><br>
-        <span class="date">${sampleEvent.ED}</span><br>
-        <span class="cat">${sampleEvent.cat}</span><br>
+        <span class="text" id='st'>${sampleEvent.ET}</span><br>
+        <span class="date" id='sd'>🗓️${sampleEvent.ED}</span><br>
+        <span class="cat" id='sa'>${sampleEvent.cat}</span><br>
         <span class="des">${sampleEvent.des}</span>
         <button class="delete">X</button>
     `
     ul.appendChild(li)
+    li.querySelector('.delete').addEventListener('click', () => {
+        li.remove()
+    })
 }

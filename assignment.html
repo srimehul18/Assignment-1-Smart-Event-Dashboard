@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart Event Dashboard</title>
     <link rel="stylesheet" href="assignment.css">
+    <header >
+        <h1 id="header">Smart Event Dashboard</h1>
+    </header>
 </head>
 <body>
     <main id="main">
     <div id="q">
+        <h2 id="heading">Add New Event</h2>
     <form id="form">
         <label for="ET">Event Title:</label>
         <input type="text" class="ET" name="ET"><br><br>
@@ -18,9 +22,11 @@
 
         <label for="cat">Event Category</label>
         <select class="cat" name="cat">
-     <option value="Function">Function</option>
+        <option value="Function">Function</option>
         <option value="Seminar">Seminar</option>
         <option value="Workshop">Workshop</option>
+        <option value="Festival">Festival</option>
+        <option value="Social">Social</option>
         </select><br><br>
         Event Description: <textarea class="des" name="des"></textarea><br><br>
 
@@ -28,7 +34,7 @@
     </form>
     </div>
     <div id="events">
-        <h2>Events</h2>
+        <h2 id="h2">Events</h2>
         <button type="button" class="clear">Clear All Events</button>
         <button type="button" class="sample">Add sample event</button>
         <ul class="ul"></ul>

@@ -1,6 +1,6 @@
-*{
+* {
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
 }
 
 body {
@@ -8,26 +8,41 @@ body {
     font-family: system-ui, sans-serif;
     background: linear-gradient(135deg, #8fb7ff, #9ee7e1);
 }
+
 #main {
     max-width: 1100px;
     margin: 40px auto;
     display: flex;
     gap: 20px;
 }
-#q{
+
+#header {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+#q {
     width: 30%;
     height: 500px;
     background-color: aliceblue;
     padding: 10px;
-    border-radius: 10px;;
+    border-radius: 10px;
+    ;
 }
+
 #events {
     width: 70%;
     background: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
 form label {
     font-size: 16px;
     color: black;
@@ -53,7 +68,7 @@ form textarea {
 .add-btn {
     width: 100%;
     padding: 10px;
-    background: #6b5cff;
+    background: linear-gradient(135deg, #2e5aac, #6b5cff);
     color: white;
     border: none;
     border-radius: 10px;
@@ -68,6 +83,9 @@ form textarea {
 .ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
 }
 
 .ul li {
@@ -77,6 +95,7 @@ form textarea {
     margin-bottom: 12px;
     position: relative;
 }
+
 .text {
     font-weight: bold;
     font-size: 16px;
@@ -87,6 +106,18 @@ form textarea {
     font-size: 13px;
     color: #666;
 }
+
+#cat,
+#sa {
+    font-size: 13px;
+    color: #fff;
+    background: #6b5cff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+}
+
 .delete {
     position: absolute;
     top: 10px;
@@ -99,13 +130,49 @@ form textarea {
     height: 24px;
     cursor: pointer;
 }
-.li{
+
+.li {
     width: 250px;
 }
-.clear{
+
+#cat,
+#sa {
+    width: fit-content;
+    border-radius: 50px;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#date,
+#sd {
+    font-weight: bold;
+    color: #222;
+}
+
+#h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4361ee;
+}
+
+#heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4361ee;
+}
+
+.ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.01px;
+    background: linear-gradient(120deg, #ffe5d9, #fff0f3);
+}
+
+.clear {
     margin-bottom: 20px;
     padding: 10px 15px;
-    background: linear-gradient(135deg, #2e5aac , #6b5cff);
+    background: linear-gradient(135deg, #2e5aac, #6b5cff);
     color: white;
     border: none;
     border-radius: 10px;
@@ -115,10 +182,10 @@ form textarea {
     width: 350px;
 }
 
-.sample{
+.sample {
     margin-bottom: 20px;
     padding: 10px 15px;
-    background: linear-gradient(135deg, #2e5aac , #6b5cff);
+    background: linear-gradient(135deg, #2e5aac, #6b5cff);
     color: white;
     border: none;
     border-radius: 10px;
@@ -127,8 +194,15 @@ form textarea {
     text-align: center;
     width: 350px;
 }
-.clear:hover{
+
+.clear:hover {
     background: #e04e4e;
     scale: 1.05;
-    transform: scaleY(1.05);
+    transition: all 0.3s ease scaleY(1.05);
+}
+
+.sample:hover {
+    background: #6b5cff;
+    scale: 1.05;
+    transition: all 0.3s ease scaleY(1.05);
 }
