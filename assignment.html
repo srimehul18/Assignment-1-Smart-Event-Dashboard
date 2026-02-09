@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+    <main id="main">
+    <div id="q">
+    <form id="form">
+        <label for="ET">Name:</label>
+        <input type="text" class="ET" name="ET"><br><br>
+
+        <label for="ED">Date:</label>
+        <input type="date" class="ED" name="ED"><br><br>
+
+        <label for="cat">Category</label>
+        <select class="cat" name="cat">
+     <option value="Function">Function</option>
+        <option value="Seminar">Seminar</option>
+        <option value="Workshop">Workshop</option>
+        </select><br><br>
+        Description: <textarea class="des" name="des"></textarea><br><br>
+
+        <button type="button" class="add-btn">Add Event</button>
+    </form>
+    </div>
+    <div id="events">
+        <h2>Events</h2>
+        <ul class="ul"></ul>
+    </div>
+    </main>
+    <script src="assignment.js"></script>
+</body>
+</html>
