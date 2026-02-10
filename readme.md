@@ -8,6 +8,7 @@ The project follows a todo-style approach for learning DOM manipulation and even
 - Add a predefined sample event
 - Delete individual events
 - Clear all events
+- Multiple options for different type of events
 - Responsive card-based layout using CSS Grid
 
 ## Tech Stack
