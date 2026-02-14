@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="assignment.css">
+    <header >
+        <h1 id="header">Smart Event Dashboard</h1>
+    </header>
+</head>
+<body>
+    <main id="main">
+    <div id="q">
+        <h2 id="heading">Add New Event</h2>
+    <form id="form">
+        <label for="ET">Event Title:</label>
+        <input type="text" class="ET" name="ET" placeholder="Enter the Event Title"><br><br>
+
+        <label for="ED">Event Date:</label>
+        <input type="date" class="ED" name="ED"><br><br>
+
+        <label for="cat">Event Category</label>
+        <select class="cat" name="cat">
+        <option value="Function">Function</option>
+        <option value="Seminar">Seminar</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Festival">Festival</option>
+        <option value="Social">Social</option>
+        <option value ="Sports">Sports</option>
+        <option value ="Miscellaneous">Miscellaneous</option>
+        </select><br><br>
+        Event Description: <textarea class="des" name="des" placeholder="Enter Event Description"></textarea><br><br>
+
+        <button type="button" class="add-btn">Add Event</button>
+    </form>
+    </div>
+    <div id="events">
+        <h2 id="h2">Events</h2>
+        <button type="button" class="clear">Clear All Events</button>
+        <button type="button" class="sample">Add sample event</button>
+        <ul class="ul"></ul>
+    </div>
+    </main>
+    <script src="assignment.js"></script>
+</body>
+</html>
