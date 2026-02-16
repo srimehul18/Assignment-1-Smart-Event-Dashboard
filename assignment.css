@@ -212,3 +212,16 @@ form textarea {
     scale: 1.05;
     transition: all 0.3s ease scaleY(1.05);
 }
+
+.edit{   
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background: #C9A227;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

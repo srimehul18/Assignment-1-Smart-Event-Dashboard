@@ -32,6 +32,9 @@ function addEvent() {
         <span class="cat" id='cat'>${c.value}</span><br>
         <span class="des">${des.value}</span>
         <button class="delete">X</button>
+
+        <button class="edit">✎</button>
+
     `
 
     ul.appendChild(li)
@@ -44,8 +47,10 @@ function addEvent() {
 
     const clear = document.querySelector('.clear')
     const sample = document.querySelector('.sample')
+    const edit = document.querySelector('.edit')
     if (clear) clear.addEventListener('click', clearEvents)
     if (sample) sample.addEventListener('click', addSampleEvent)
+    if (edit) edit.addEventListener('click', editEvent)
 
     r.value = ''
     d.value = ''
@@ -73,9 +78,26 @@ function addSampleEvent() {
         <span class="cat" id='sa'>${sampleEvent.cat}</span><br>
         <span class="des">${sampleEvent.des}</span>
         <button class="delete">X</button>
+        <button class="edit">Edit</button>
     `
     ul.appendChild(li)
     li.querySelector('.delete').addEventListener('click', () => {
         li.remove()
     })
+}
+
+function editEvent() {
+    const li = this.closest('li')
+    const text = li.querySelector('.text')
+    const date = li.querySelector('.date')
+    const cat = li.querySelector('.cat')
+    const des = li.querySelector('.des')
+    const newText = prompt('Edit Task Name:', text.textContent)
+    const newDate = prompt('Edit Date (YYYY-MM-DD):', date.textContent.replace('🗓️', ''))
+    const newCat = prompt('Edit Category:', cat.textContent)
+    const newDes = prompt('Edit Description:', des.textContent)
+    if (newText) text.textContent = newText
+    if (newDate) date.textContent = '🗓️ ' + newDate
+    if (newCat) cat.textContent = newCat
+    if (newDes) des.textContent = newDes
 }
