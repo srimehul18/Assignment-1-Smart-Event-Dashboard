@@ -9,7 +9,7 @@ The project follows a todo-style approach for learning DOM manipulation and even
 - Delete individual events
 - Clear all events
 - Multiple options for different type of events
-- Responsive card-based layout using CSS Grid
+- edit and star the events
 
 ## Tech Stack
 - HTML
@@ -21,6 +21,8 @@ The project follows a todo-style approach for learning DOM manipulation and even
 - Each event is rendered as a card inside an unordered list
 - Buttons trigger event listeners for add, delete, and clear actions
 - No frameworks or libraries are used
+- You can star the events as per your convinience
+- you can also edit the events
 
 ## Project Structure
 - `index.html` – Markup structure

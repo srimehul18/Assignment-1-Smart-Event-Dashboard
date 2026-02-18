@@ -10,7 +10,7 @@ body {
 }
 
 #main {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 40px auto;
     display: flex;
     gap: 20px;
@@ -36,11 +36,13 @@ body {
 }
 
 #events {
-    width: 70%;
-    background: #ffffff;
+    width: 90%;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
 form label {
@@ -84,7 +86,7 @@ form textarea {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
@@ -107,14 +109,16 @@ form textarea {
     color: #666;
 }
 
-#cat,
+.cat,
 #sa {
     font-size: 13px;
     color: #fff;
-    background: #6b5cff;
+    width: fit-content;
+    background: rgba(117, 33, 181, 0.67);
     padding: 2px 6px;
-    border-radius: 4px;
+    border-radius: 100px;
     display: inline-block;
+    padding: 5px 10px;
     text-align: center;
 }
 
@@ -132,7 +136,7 @@ form textarea {
 }
 
 .li {
-    width: 250px;
+    width: 275px;
 }
 
 #cat,
@@ -167,6 +171,7 @@ form textarea {
     flex-direction: column;
     gap: 0.01px;
     background: linear-gradient(120deg, #ffe5d9, #fff0f3);
+    font-weight: bold;
 }
 
 .clear {
@@ -179,7 +184,7 @@ form textarea {
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    width: 350px;
+    width: 410px;
 }
 
 .sample {
@@ -192,7 +197,7 @@ form textarea {
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    width: 350px;
+    width: 410px;
 }
 
 .clear:hover {
@@ -224,4 +229,66 @@ form textarea {
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+
+.star{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: #f4b400;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+.delete,
+.edit,
+.star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+.delete .text,
+.edit .text,
+.star .text {
+    display: none;
+    font-size: 1rem;
+}
+.delete:hover,
+.edit:hover,
+.star:hover {
+    width: 70px;
+    border-radius: 6px;
+    scale: 1.05;
+}
+.delete:hover .text,
+.edit:hover .text,
+.star:hover .text {
+    display: inline;
+    font-size: 0.8rem;
+}
+.delete:hover .icon,
+.edit:hover .icon,
+.star:hover .icon {
+    display: none;
+}
+.star.active {
+    background: linear-gradient(135deg, #ffd54f, #ffb300);
+}
+.starred {
+    border: 2px solid goldenrod;
+    border-left: 7px solid #85141c;
+    box-shadow: 0 0 14px rgba(255, 193, 7, 0.45);
 }
