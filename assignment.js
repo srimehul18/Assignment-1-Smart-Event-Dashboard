@@ -14,6 +14,11 @@ if (sample) {
     sample.addEventListener('click', addSampleEvent)
 }
 
+const clear = document.querySelector('.clear')
+if (clear) {
+    clear.addEventListener('click', clearEvents)
+}
+
 function addEvent() {
     if (r.value === '') {
         alert('Please enter a task')
@@ -68,9 +73,6 @@ const starbtn = li.querySelector('.star')
 
     li.querySelector('.edit').addEventListener('click', editEvent) 
 
-    const clear = document.querySelector('.clear')
-
-    if (clear) clear.addEventListener('click', clearEvents)
 
     r.value = ''
     d.value = ''
